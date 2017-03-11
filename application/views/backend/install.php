@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php
-	$system_name	=	$this->db->get_where('settings' , array('type'=>'system_name'))->row()->description;
-	$system_title	=	$this->db->get_where('settings' , array('type'=>'system_title'))->row()->description;
-	?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
@@ -12,7 +8,7 @@
 	<meta name="description" content="Neon Admin Panel" />
 	<meta name="author" content="" />
 	
-	<title><?php echo get_phrase('login');?> | <?php echo $system_title;?></title>
+	<title>Install | Ekattor School Management System Pro</title>
 	
 
 	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
@@ -39,10 +35,7 @@
 <body class="page-body login-page login-form-fall" data-url="http://neon.dev">
 
 
-<!-- This is needed when you send requests via Ajax -->
-<script type="text/javascript">
-var baseurl = '<?php echo base_url();?>';
-</script>
+
 
 <div class="login-container">
 	
@@ -51,83 +44,38 @@ var baseurl = '<?php echo base_url();?>';
 		<div class="login-content" style="width:100%;">
 			
 			<a href="<?php echo base_url();?>" class="logo">
-				<img src="/uploads/logo.png" height="60" alt="" />
+				<img src="uploads/logo.png" height="60" alt="" />
 			</a>
 			
 			<p class="description">
             	<h2 style="color:#cacaca; font-weight:100;">
-					<?php echo $system_name;?>
+					Ekattor School Management System Pro
               </h2>
            </p>
 			
-			<!-- progress bar indicator -->
-			<div class="login-progressbar-indicator">
-				<h3>43%</h3>
-				<span>logging in...</span>
-			</div>
-		</div>
-		
-	</div>
-	
-	<div class="login-progressbar">
-		<div></div>
-	</div>
-	
-	<div class="login-form">
-		
-		<div class="login-content">
-			
-			<div class="form-login-error">
-				<h3>Invalid login</h3>
-				<p>Please enter correct email and password!</p>
-			</div>
-			
-			<form method="post" role="form" id="form_login">
-				
-				<div class="form-group">
-					
-					<div class="input-group">
-						<div class="input-group-addon">
-							<i class="entypo-user"></i>
-						</div>
-						
-						<input type="text" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off" data-mask="email" />
-					</div>
-					
-				</div>
-				
-				<div class="form-group">
-					
-					<div class="input-group">
-						<div class="input-group-addon">
-							<i class="entypo-key"></i>
-						</div>
-						
-						<input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" />
-					</div>
-				
-				</div>
-				
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary btn-block btn-login">
-						<i class="entypo-login"></i>
-						Login
-					</button>
-				</div>
-				
-						
-			</form>
-			
-			
-			<div class="login-bottom-links">
-				<a href="<?php echo base_url();?>index.php?login/forgot_password" class="link">
-					<?php echo get_phrase('forgot_your_password');?> ?
-				</a>
-			</div>
 			
 		</div>
 		
 	</div>
+	
+
+	
+<div class="row" style="margin-top: 30px;">
+
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<div class="panel panel-primary" style="background-color:rgba(255, 255, 255, 0);border-color: rgba(235, 235, 235, 0.14);">
+		        <div class="panel-heading" style="background-color:rgba(255, 255, 255, 0.16);border-color: rgba(204, 204, 204, 0.08);">
+		    		<div class="panel-title">Installation</div>
+		    	</div>
+		    		
+		    	<div class="panel-body">
+		    		<p>Before running the application, please follow the installation instruction provided in the Developer Manual Documentation.</p>
+		    	</div>
+		    </div>
+		</div>
+		<div class="col-md-4"></div>
+</div>	
 	
 </div>
 
