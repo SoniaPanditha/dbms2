@@ -1,18 +1,9 @@
 <?php
 
 
-/*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
- */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
 
-/*
- *---------------------------------------------------------------
- * ERROR REPORTING
- *---------------------------------------------------------------
- */
+
 switch (ENVIRONMENT)
 {
 	case 'development':
@@ -39,40 +30,39 @@ switch (ENVIRONMENT)
 		exit(1); // EXIT_ERROR
 }
 
-/*
- *---------------------------------------------------------------
- * SYSTEM FOLDER NAME
- *---------------------------------------------------------------
- */
+
 	$system_path = 'system';
 
-/*
- *---------------------------------------------------------------
- * APPLICATION FOLDER NAME
- *---------------------------------------------------------------
- */
+
 	$application_folder = 'application';
 
-/*
- *---------------------------------------------------------------
- * VIEW FOLDER NAME
- *---------------------------------------------------------------
- *
- * If you want to move the view folder out of the application
- * folder set the path to the folder here. The folder can be renamed
- * and relocated anywhere on your server. If blank, it will default
- * to the standard location inside your application folder. If you
- * do move this, use the full server path to this folder.
- *
- * NO TRAILING SLASH!
- */
+
 	$view_folder = '';
 
 
-	 $assign_to_config['name_of_config_item'] = 'value of config item';
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
 
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
 	// Set the current directory correctly for CLI requests
 	if (defined('STDIN'))
@@ -100,7 +90,7 @@ switch (ENVIRONMENT)
 
 /*
  * -------------------------------------------------------------------
- *  set the main path constants
+ *  Now that we know the path, set the main path constants
  * -------------------------------------------------------------------
  */
 	// The name of THIS file
