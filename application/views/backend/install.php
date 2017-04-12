@@ -8,7 +8,7 @@
 	<meta name="description" content="Neon Admin Panel" />
 	<meta name="author" content="" />
 	
-	<title>Install | Ekattor School Management System Pro</title>
+	<title></title>
 	
 
 	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
@@ -49,7 +49,7 @@
 			
 			<p class="description">
             	<h2 style="color:#cacaca; font-weight:100;">
-					Ekattor School Management System Pro
+					
               </h2>
            </p>
 			
