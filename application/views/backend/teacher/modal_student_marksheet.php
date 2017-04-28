@@ -16,7 +16,7 @@ foreach ($student_info as $row1):
         <div class="panel-group joined" id="accordion-test-2">
 
             <?php
-            /////SEMESTER WISE RESULT, RESULTSHEET FOR EACH SEMESTER SEPERATELY
+            /////SEMESTER WISE RESULT, 
             $toggle = true;
             $exams = $this->crud_model->get_exams();
             foreach ($exams as $row0):
